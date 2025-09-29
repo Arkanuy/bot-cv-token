@@ -163,7 +163,7 @@ module.exports = {
 
             const successfulTokens = results
                 .filter(r => r.success)
-                .map(r => `${r.email}:${r.token}`)
+                .map(r => `${r.token}`)
                 .join('\n');
 
             const failedEmails = results
