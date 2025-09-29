@@ -97,6 +97,7 @@ npm install
 ### 2️⃣ Configuration
 
 Edit `.env` file:
+You need to rename file .env.example to .env first
 
 ```env
 DISCORD_TOKEN=your_discord_bot_token_here
