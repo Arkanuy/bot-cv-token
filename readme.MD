@@ -1,6 +1,6 @@
 # 🤖 Discord Token Refresher Bot
 
-A high-performance, modular Discord bot for refreshing account tokens using your API server with concurrent processing and real-time progress tracking.
+A high-performance, modular Discord bot for refreshing account tokens using API server with concurrent processing and real-time progress tracking.
 
 ## ✨ Features
 
@@ -22,7 +22,7 @@ Before starting, make sure you have:
 - ✅ A Discord bot token ([How to get one](https://discord.com/developers/applications))
 - ✅ Node.js installed (see installation guide below)
 - ✅ Working proxies
-- ✅ Access to your API server
+- ✅ Access to API server
 
 ## 🔧 Node.js Installation Guide
 
