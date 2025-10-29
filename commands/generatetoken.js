@@ -60,7 +60,18 @@ module.exports = {
             const response = await axios.get(file.url);
             const content = response.data;
             const emails = content.split('\n')
-                .map(email => email.trim())
+                .map(line => {
+                    const trimmed = line.trim();
+                    const colonIndex = trimmed.indexOf(':');
+                    const pipeIndex = trimmed.indexOf('|');
+                    
+                    if (colonIndex > 0 && (pipeIndex < 0 || colonIndex < pipeIndex)) {
+                        return trimmed.substring(0, colonIndex).trim();
+                    } else if (pipeIndex > 0) {
+                        return trimmed.substring(0, pipeIndex).trim();
+                    }
+                    return trimmed;
+                })
                 .filter(email => email.length > 0);
 
             console.log(`📧 Found ${emails.length} emails in file`);
@@ -254,7 +265,7 @@ module.exports = {
                     ephemeral: true
                 });
             }
-            } finally {
+        } finally {
             backgroundUpdater.stopRealTimeUpdates(sessionId);
             console.log(`=== Token Generation Complete ===\n`);
         }
