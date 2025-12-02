@@ -39,7 +39,7 @@ async function deployCommands() {
     }
 }
 
-client.once('ready', async () => {
+client.once('clientReady', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`⚙️ Auto Retry: ${process.env.AUTO_RETRY || 3} attempts`);
     console.log(`🧵 Max Threads: ${process.env.MAX_THREADS || 100}`);
