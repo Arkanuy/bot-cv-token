@@ -1,0 +1,5 @@
+proxy.example.com:8080:myuser:mypass
+proxy.example.com:8080:myuser:mypass
+proxy.example.com:8080:myuser:mypass
+proxy.example.com:8080:myuser:mypass
+proxy.example.com:8080:myuser:mypass
